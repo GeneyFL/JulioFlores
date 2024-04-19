@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Calculadora</h2>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Suma</h3>
+          <div class="form-group">
+            <label for="inputSuma1">Número 1:</label>
+            <input type="number" id="inputSuma1" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputSuma2">Número 2:</label>
+            <input type="number" id="inputSuma2" class="form-control">
+          </div>
+          <button onclick="sumar()" class="btn btn-primary">Calcular</button>
+          <p id="resultadoSuma" class="mt-2"></p>
+        </div>
+  
+        <div class="col-md-6">
+          <h3>Resta</h3>
+          <div class="form-group">
+            <label for="inputResta1">Número 1:</label>
+            <input type="number" id="inputResta1" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputResta2">Número 2:</label>
+            <input type="number" id="inputResta2" class="form-control">
+          </div>
+          <button onclick="restar()" class="btn btn-primary">Calcular</button>
+          <p id="resultadoResta" class="mt-2"></p>
+        </div>
+      </div>
+  
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <h3>División</h3>
+          <div class="form-group">
+            <label for="inputDivision1">Dividendo:</label>
+            <input type="number" id="inputDivision1" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputDivision2">Divisor:</label>
+            <input type="number" id="inputDivision2" class="form-control">
+          </div>
+          <button onclick="dividir()" class="btn btn-primary">Calcular</button>
+          <p id="resultadoDivision" class="mt-2"></p>
+        </div>
+  
+        <div class="col-md-6">
+          <h3>Multiplicación</h3>
+          <div class="form-group">
+            <label for="inputMultiplicacion1">Número 1:</label>
+            <input type="number" id="inputMultiplicacion1" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputMultiplicacion2">Número 2:</label>
+            <input type="number" id="inputMultiplicacion2" class="form-control">
+          </div>
+          <button onclick="multiplicar()" class="btn btn-primary">Calcular</button>
+          <p id="resultadoMultiplicacion" class="mt-2"></p>
+        </div>
+      </div>
+  
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <h3>Raíz Cuadrada</h3>
+          <div class="form-group">
+            <label for="inputRaiz">Número:</label>
+            <input type="number" id="inputRaiz" class="form-control">
+          </div>
+          <button onclick="calcularRaiz()" class="btn btn-primary">Calcular</button>
+          <p id="resultadoRaiz" class="mt-2"></p>
+        </div>
+  
+        <div class="col-md-6">
+          <h3>Elevar al Cuadrado</h3>
+          <div class="form-group">
+            <label for="inputCuadrado">Número:</label>
+            <input type="number" id="inputCuadrado" class="form-control">
+          </div>
+          <button onclick="calcularCuadrado()" class="btn btn-primary">Calcular</button>
+          <p id="resultadoCuadrado" class="mt-2"></p>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      function sumar() {
+        var num1 = parseFloat(document.getElementById("inputSuma1").value);
+        var num2 = parseFloat(document.getElementById("inputSuma2").value);
+        var resultado = num1 + num2;
+        document.getElementById("resultadoSuma").innerText = "Resultado: " + resultado;
+      }
+  
+      function restar() {
+        var num1 = parseFloat(document.getElementById("inputResta1").value);
+        var num2 = parseFloat(document.getElementById("inputResta2").value);
+        var resultado = num1 - num2;
+        document.getElementById("resultadoResta").innerText = "Resultado: " + resultado;
+      }
+  
+      function dividir() {
+        var num1 = parseFloat(document.getElementById("inputDivision1").value);
+        var num2 = parseFloat(document.getElementById("inputDivision2").value);
+        var resultado = num1 / num2;
+        document.getElementById("resultadoDivision").innerText = "Resultado: " + resultado;
+      }
+  
+      function multiplicar() {
+        var num1 = parseFloat(document.getElementById("inputMultiplicacion1").value);
+        var num2 = parseFloat(document.getElementById("inputMultiplicacion2").value);
+        var resultado = num1 * num2;
+        document.getElementById("resultadoMultiplicacion").innerText = "Resultado: " + resultado;
+      }
+  
+      function calcularRaiz() {
+        var num = parseFloat(document.getElementById("inputRaiz").value);
+        var resultado = Math.sqrt(num);
+        document.getElementById("resultadoRaiz").innerText = "Resultado: " + resultado;
+      }
+  
+      function calcularCuadrado() {
+        var num = parseFloat(document.getElementById("inputCuadrado").value);
+        var resultado = Math.pow(num, 2);
+        document.getElementById("resultadoCuadrado").innerText = "Resultado: " + resultado;
+      }
+    </script>
+  </body>
+
+
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura y Moneda</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Conversor de Temperatura y Moneda</h2>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Conversor de Celsius a Fahrenheit</h3>
+          <div class="form-group">
+            <label for="inputCelsius">Ingrese grados Celsius:</label>
+            <input type="number" id="inputCelsius" class="form-control" step="any">
+          </div>
+          <button onclick="convertirCF()" class="btn btn-primary">Convertir</button>
+          <p id="resultadoFahrenheit" class="mt-2"></p>
+        </div>
+  
+        <div class="col-md-6">
+          <h3>Conversor de Dólares a Pesos Mexicanos</h3>
+          <div class="form-group">
+            <label for="inputDolares">Ingrese cantidad en dólares:</label>
+            <input type="number" id="inputDolares" class="form-control" step="any">
+          </div>
+          <button onclick="convertirDolaresPesos()" class="btn btn-primary">Convertir</button>
+          <p id="resultadoPesos" class="mt-2"></p>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      function convertirCF() {
+        var celsius = parseFloat(document.getElementById("inputCelsius").value);
+        var fahrenheit = (celsius * 9/5) + 32;
+        document.getElementById("resultadoFahrenheit").innerHTML = celsius.toFixed(2) + " °C equivalen a " + fahrenheit.toFixed(2) + " °F";
+      }
+  
+      function convertirDolaresPesos() {
+        var dolares = parseFloat(document.getElementById("inputDolares").value);
+        var pesos = dolares * 20; // Tasa de cambio ficticia, debes cambiarla según la tasa actual
+        document.getElementById("resultadoPesos").innerHTML = dolares.toFixed(2) + " USD equivalen a " + pesos.toFixed(2) + " MXN";
+      }
+    </script>
+  
+  </body>
+  </html>
+  
+
+
+</body>
+</html>
